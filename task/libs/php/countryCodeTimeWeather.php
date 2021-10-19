@@ -5,7 +5,8 @@ error_reporting(E_ALL);
 
 $executionStartTime = microtime(true);
 
-$url="http://api.geonames.org/countryCodeJSON?formatted=true&lat=47.03&lng=10.2&username=demo&style=full";
+$url="http://api.geonames.org/countryCodeJSON?formatted=true&lat=" . $_REQUEST['lat'] . '&lng' . $_REQUEST['lng'] . 
+ '&type' . $_REQUEST['type'] .  '&lang' . $_REQUEST['lang'] . '&radius' . $_REQUEST['radius'] . '&username=Aless81$style=full';
 
 
 
