@@ -3,14 +3,14 @@
 	<head>
 		<title>Task</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="task/stylesheet.css">
 	</head>
 	<body>
 	<table>
 			<tr>
-				<th>Country Code</th>
-				<th>Timezone</th>
-				<th>Weather</th>
+				<th>API Name</th>
+				<th>API Description</th>
+				<th></th>
 			</tr>
 
 		</table>
@@ -21,6 +21,10 @@
 			<option value=55>Brazil</option>
 			<option value=86>China</option>
 		</select>
+		
+		<button id="submit">Submit</button>
+
+		<br><br>
 
 		<select id="timezone">
 			<option value="GMT">GMT</option>
@@ -28,6 +32,10 @@
 			<option value="BRT"> BRT</option>
 			<option value="UTC+08:00">UTC+08:00</option>
 		</select>
+
+		<button id="submit">Submit</button>
+
+		<br><br>
 
 		<select id="weather">
 			<option value="rain">Rain</option>
@@ -39,6 +47,6 @@
 
 		<br><br>
 
-		<script type="application/javascript" src="libs/js/script.js"></script>
+		<script type="application/javascript" src="task/libs/js/script.js"></script>
 	</body>
 </html>
