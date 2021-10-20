@@ -12,6 +12,11 @@ table {
     align-items: flex-end;
 }
 
-div, #results {
-    width: 100%
+p {
+    font-weight:bold;
+}
+
+td {
+    font-weight:bolder;
+    
 }

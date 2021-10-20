@@ -16,7 +16,6 @@
 		</thead>
 				
 		<tr>
-		<td>Location</td>
 		<td>
 		<select id="txtCountry">
 			<option value=44>England</option>
@@ -24,6 +23,14 @@
 			<option value=55>Brazil</option>
 			<option value=86>China</option>
 		</select>
+		</td>
+		<td><u>Location</u>
+			<br>
+			<p>This API retrieves the country code. </p>
+				lattitude
+			<input type="text" id="lattitude">
+				longitude
+			<input type="text" id="longitude">
 		</td>
 		<td>
 		<button id="submit">Submit</button>
@@ -33,7 +40,6 @@
 		<br><br>
 
 		<tr>
-		<td>Timezone</td>
 		<td>
 		<select id="txtTimezone">
 			<option value="GMT">GMT</option>
@@ -41,6 +47,16 @@
 			<option value="BRT"> BRT</option>
 			<option value="UTC+08:00">UTC+08:00</option>
 		</select>
+		</td>
+		<td><u>Timezone</u>
+			<br>
+			<p>This API retrieves the timezone. </p>
+				lattitude
+			<input type="text" id="lattitude">
+				longitude
+			<input type="text" id="longitude">
+				radius
+			<input type="text" id="radius">
 		</td>
 		<td>
 		<button id="submit">Submit</button>
@@ -50,13 +66,19 @@
 		<br><br>
 
 		
-		<td>Weather</td>
+		
 		<td>
 		<select id="txtWeather">
 			<option value="rain">Rain</option>
 			<option value="warm">Warm</option>
 			<option value="cool">Cool</option>
 		</select>
+		</td>
+		<td><u>Weather</u>
+			<br>
+			<p>This API retrieves the weather. </p>
+				compass(North, South, East, West)
+			<input type="text" id="compass">
 		</td>
 		<td>
 		<button id="submit">Submit</button>
@@ -67,7 +89,7 @@
 		<tr>
 		<td>
 		<div id="results">
-		<textarea></textarea>
+		
 		</td>
 		</tr>
 		</table>
