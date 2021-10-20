@@ -3,56 +3,76 @@
 	<head>
 		<title>Task</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="task/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	</head>
 	<body>
 	<table>
+		<thead>
 			<tr>
 				<th>API Name</th>
 				<th>API Description</th>
+				<th>Submit</th>
 			</tr>
-
-		</table>
+		</thead>
+				
 		<tr>
-		<select id="countryCode">
+		<td>Location</td>
+		<td>
+		<select id="txtCountry">
 			<option value=44>England</option>
 			<option value=1>Canada</option>
 			<option value=55>Brazil</option>
 			<option value=86>China</option>
 		</select>
+		</td>
+		<td>
+		<button id="submit">Submit</button>
+		</td>
 		</tr>
-			<td>Location</td>
+
+		<br><br>
 
 		<tr>
-		<button id="submit">Submit</button>
-		</tr>
-		<br><br>
-		<tr>
-		<select id="timezone">
+		<td>Timezone</td>
+		<td>
+		<select id="txtTimezone">
 			<option value="GMT">GMT</option>
 			<option value="NST">NST</option>
 			<option value="BRT"> BRT</option>
 			<option value="UTC+08:00">UTC+08:00</option>
 		</select>
-		</tr>
-			<td>Timezone</td>
-		<tr>
+		</td>
+		<td>
 		<button id="submit">Submit</button>
+		</td>
 		</tr>
+
 		<br><br>
-		<tr>
-		<select id="weather">
+
+		
+		<td>Weather</td>
+		<td>
+		<select id="txtWeather">
 			<option value="rain">Rain</option>
 			<option value="warm">Warm</option>
 			<option value="cool">Cool</option>
 		</select>
-		</tr>
-			<td>Weather</td>
-		<tr>
+		</td>
+		<td>
 		<button id="submit">Submit</button>
+		</td>
 		</tr>
-		<br><br>
 
+		<br><br>
+		<tr>
+		<td>
+		<div id="results">
+		<textarea></textarea>
+		</td>
+		</tr>
+		</table>
+
+		<script type="application/javascript" src="task/libs/js/jquery-3.6.0.js"></script>
 		<script type="application/javascript" src="task/libs/js/script.js"></script>
 	</body>
 </html>
