@@ -567,3 +567,9 @@ S.readyWait++:S.ready(!0)},S.isArray=Array.isArray,S.parseJSON=JSON.parse,S.node
 t=S.type(e);return("number"===t||"string"===t)&&!isNaN(e-parseFloat(e))},S.trim=function(e){return null==e?"":(e+"").replace(Xt,"")},"function"==typeof
 define&&define.amd&&define("jquery",[],function(){return S});var Vt=C.jQuery,Gt=C.$;return S.noConflict=function(e){return C.$===S&&(C.$=Gt),e&&C.jQuery===S&&
 (C.jQuery=Vt),S},"undefined"==typeof e&&(C.jQuery=C.$=S),S});
+
+$(window).on('load', function () { if ($('#preloader').length) {
+    $('#preloader').delay(1000).fadeOut('slow', function () { $(this).remove();
+    }); }
+    });
+    
