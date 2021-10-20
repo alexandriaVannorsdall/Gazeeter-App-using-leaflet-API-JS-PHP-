@@ -1,7 +1,7 @@
 $('submit').click(function() {
 
     $.$.ajax({
-        url: "libs/php/countryCodeTimeWeather.php",
+        url: "libs/php/countryCode.php",
         type: 'POST',
         dataType: 'json',
         data: {
