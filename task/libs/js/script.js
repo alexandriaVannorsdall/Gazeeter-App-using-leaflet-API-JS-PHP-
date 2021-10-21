@@ -1,4 +1,4 @@
-$(':countryCodeBtn').click(function() {
+$('#countryCodeBtn').click(function() {
 
     $.ajax({
         url: "libs/php/countryCode.php",
@@ -25,7 +25,7 @@ $(':countryCodeBtn').click(function() {
 
 });
 
-    $(':timezoneBtn').click(function() {
+    $('#timezoneBtn').click(function() {
 
     $.ajax({
         url: "libs/php/timezone.php",
@@ -52,7 +52,7 @@ $(':countryCodeBtn').click(function() {
 
 });
 
-    $(':weatherBtn').click(function() {
+    $('#weatherBtn').click(function() {
 
     $.ajax({
         url: "libs/php/weather.php",
