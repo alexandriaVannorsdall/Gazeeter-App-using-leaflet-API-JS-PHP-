@@ -1,4 +1,11 @@
-$('#countryCodeBtn').click(function() {
+$(window).on('load', function () { 
+    if ($('#preloader').length) {
+    $('#preloader').delay(1000).fadeOut('slow', function () 
+    { $(this).remove();
+        }); }
+    });
+
+$('#countryCodeBtn').click(function() { 
 
     $.ajax({
         url: "libs/php/countryCode.php",
@@ -9,11 +16,11 @@ $('#countryCodeBtn').click(function() {
             lng: $('#lng').val()
         },
         success: function (response) {
-            console.log(JSON.stringfy(response));
+            console.log(JSON.stringify(response));
 
             if (response.status.name == "ok") {
 
-                $('#txtCountry').html(result['data'][0]['country']);
+                $('#txtCountry').html(result.data[0].country);
 
             }
             
@@ -36,11 +43,11 @@ $('#countryCodeBtn').click(function() {
             lng: $('#lng').val()
         },
         success: function (response) {
-            console.log(JSON.stringfy(response));
+            console.log(JSON.stringify(response));
 
             if (response.status.name == "ok") {
 
-                $('#txtTimezone').html(result['data'][0]['timezone']);
+                $('#txtTimezone').html(result.data[0].timezone);
 
             }
             
@@ -66,19 +73,22 @@ $('#countryCodeBtn').click(function() {
 
         },
         success: function (response) {
-            console.log(JSON.stringfy(response));
+            console.log(JSON.stringify(response));
 
             if (response.status.name == "ok") {
 
-                $('#txtWeather').html(result['data'][0]['weather']);
+                $('#txtWeather').html(result.data[0].weather);
 
             }
             
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log("There has been an error.");
-        },
+            },
+        });
+
     });
 
-});
-    
+
+
+
