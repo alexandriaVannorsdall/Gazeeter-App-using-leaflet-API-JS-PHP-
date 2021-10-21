@@ -1,6 +1,6 @@
-$('submit').click(function() {
+$(':countryCodeBtn').click(function() {
 
-    $.$.ajax({
+    $.ajax({
         url: "libs/php/countryCode.php",
         type: 'POST',
         dataType:'json',
@@ -23,7 +23,11 @@ $('submit').click(function() {
         }
     });
 
-    $.$.ajax({
+});
+
+    $(':timezoneBtn').click(function() {
+
+    $.ajax({
         url: "libs/php/timezone.php",
         type: 'POST',
         dataType:'json',
@@ -46,7 +50,11 @@ $('submit').click(function() {
         }
     });
 
-    $.$.ajax({
+});
+
+    $(':weatherBtn').click(function() {
+
+    $.ajax({
         url: "libs/php/weather.php",
         type: 'POST',
         dataType:'json',
