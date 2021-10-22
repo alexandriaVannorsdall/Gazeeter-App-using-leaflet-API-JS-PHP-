@@ -66,10 +66,10 @@ $('#countryCodeBtn').click(function() {
         type: 'POST',
         dataType:'json',
         data: {
-            north: $('#northWeather').val(),
-            south: $('#southWeather').val(),
-            east: $('#eastWeather').val(),
-            west: $('#westWeather').val()
+            north: $('#northWeather2').val(),
+            south: $('#southWeather2').val(),
+            east: $('#eastWeather2').val(),
+            west: $('#westWeather2').val()
 
         },
         success: function (response) {
