@@ -36,9 +36,9 @@
 			<br><br>
 			<p>This API retrieves the country code. </p>
 				lattitude
-			<input type="text" id="lattitude">
+			<input type="text" id="codeLat">
 				longitude
-			<input type="text" id="longitude">
+			<input type="text" id="codeLng">
 		</td>
 		<td>
 		<button id="countryCodeBtn" type="Button">Submit</button>
@@ -60,9 +60,9 @@
 			<br><br>
 			<p>This API retrieves the timezone. </p>
 				lattitude
-			<input type="text" id="lattitude">
+			<input type="text" id="timeLat">
 				longitude
-			<input type="text" id="longitude">
+			<input type="text" id="timeLng">
 		</td>
 		<td>
 		<button id="timezoneBtn" type="Button">Submit</button>
@@ -73,16 +73,20 @@
 
 		<td>
 		<select id="txtWeather">
-			<option value="rain">Rain</option>
-			<option value="warm">Warm</option>
-			<option value="cool">Cool</option>
+			<option value="north">North</option>
+			<option value="south">South</option>
+			<option value="east">East</option>
+			<option value="west">West</option>
 		</select>
 		</td>
 		<td><u>Weather</u>
 			<br><br>
 			<p>This API retrieves the weather. </p>
 				compass(North, South, East, West)
-			<input type="text" id="compass">
+			<input type="checkbox">North</input>
+			<input type="checkbox">South</input>
+			<input type="checkbox">East</input>
+			<input type="checkbox">West</input>
 		</td>
 		<td>
 		<button id="weatherBtn" type="Button">Submit</button>

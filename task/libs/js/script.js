@@ -12,8 +12,8 @@ $('#countryCodeBtn').click(function() {
         type: 'POST',
         dataType:'json',
         data: {
-            lat: $('#lat').val(),
-            lng: $('#lng').val()
+            lat: $('#codeLat').val(),
+            lng: $('#codeLng').val()
         },
         success: function (response) {
             console.log(JSON.stringify(response));
@@ -39,8 +39,8 @@ $('#countryCodeBtn').click(function() {
         type: 'POST',
         dataType:'json',
         data: {
-            lat: $('#lat').val(),
-            lng: $('#lng').val()
+            lat: $('#timeLat').val(),
+            lng: $('#timeLng').val()
         },
         success: function (response) {
             console.log(JSON.stringify(response));
