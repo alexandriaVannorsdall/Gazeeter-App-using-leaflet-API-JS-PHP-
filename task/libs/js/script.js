@@ -59,17 +59,15 @@ $('#countryCodeBtn').click(function() {
 
 });
 
-    $('#weatherBtn').click(function() {
+    $('#oceanBtn').click(function() {
 
     $.ajax({
-        url: "libs/php/weather.php",
+        url: "libs/php/ocean.php",
         type: 'POST',
         dataType:'json',
         data: {
-            north: $('#northWeather2').val(),
-            south: $('#southWeather2').val(),
-            east: $('#eastWeather2').val(),
-            west: $('#westWeather2').val()
+            lat: $('#OceanLat').val(),
+            lng: $('#OceanLng').val()
 
         },
         success: function (response) {
@@ -77,7 +75,7 @@ $('#countryCodeBtn').click(function() {
 
             if (response.status.name == "ok") {
 
-                $('#txtWeather').html(result.data[0].weather);
+                $('#txtOcean').html(result.data[0].ocean);
 
             }
             
