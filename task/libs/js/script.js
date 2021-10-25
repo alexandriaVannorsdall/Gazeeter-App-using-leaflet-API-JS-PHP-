@@ -66,8 +66,8 @@ $('#countryCodeBtn').click(function() {
         type: 'POST',
         dataType:'json',
         data: {
-            lat: $('#OceanLat').val(),
-            lng: $('#OceanLng').val()
+            lat: $('#oceanLat').val(),
+            lng: $('#oceanLng').val()
 
         },
         success: function (response) {

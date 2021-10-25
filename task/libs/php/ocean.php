@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 $executionStartTime = microtime(true);
 
 $url="http://api.geonames.org/oceanJSON?formatted=true&lat=" . $_REQUEST['lat'] . '&lng=' . $_REQUEST['lng']  . '&username=Aless81';
+
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
