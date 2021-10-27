@@ -108,20 +108,51 @@
 			function showCountryCode() {
 				let xhr = XMLHttpRequest()
 
-					xhr.open('POST')
+					xhr.open('POST','countryCode.php' ,true)
+
+					xhr.onload = function() {
+						if (xhr.status == 200) {
+							console.log('success')
+							let countryCode = JSON.parse(this.response)
+							console.log(countryCode);
+						}
+					}
+
+					xhr.send()
 			}
 
 			function showTimezone() {
 				let xhr = XMLHttpRequest()
 
 
-					xhr.open('POST')
+					xhr.open('POST','timezone.php' ,true)
+
+					xhr.onload = function() {
+						if (xhr.status == 200) {
+							console.log('success')
+							let timezone = JSON.parse(this.response)
+							console.log(timezone)
+
+						}
+					}
+
+					xhr.send()
 			}
 
 			function showOcean() {
 				let xhr = XMLHttpRequest()
 			
-					xhr.open('POST')
+					xhr.open('POST','ocean.php',true)
+
+					xhr.onload = function() {
+						if (xhr.status == 200) {
+							console.log('success')
+							let ocean = JSON.parse(this.response)
+							console.log(ocean)
+						}
+					}
+
+					xhr.send()
 			}
 		
 		

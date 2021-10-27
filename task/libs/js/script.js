@@ -7,6 +7,8 @@ $(window).on('load', function () {
 
 $('#countryCodeBtn').click(function() { 
 
+    var $txtCountry = $('#textCountry');
+
     $.ajax({
         url: "libs/php/countryCode.php",
         type: 'POST',
@@ -34,6 +36,8 @@ $('#countryCodeBtn').click(function() {
 
     $('#timezoneBtn').click(function() {
 
+        var $txtTimezone = $('#txtTimezone');
+
     $.ajax({
         url: "libs/php/timezone.php",
         type: 'POST',
@@ -60,6 +64,8 @@ $('#countryCodeBtn').click(function() {
 });
 
     $('#oceanBtn').click(function() {
+
+        var $txtOcean = $('txtOcean');
 
     $.ajax({
         url: "libs/php/ocean.php",
