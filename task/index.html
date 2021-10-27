@@ -95,7 +95,7 @@
 		<th>
 		<td colspan="3" align="center">Response
 		<div id="response">
-		<p id="txtOcean"></p>
+		<p id="txtCountry"></p>
 		<p id="txtTimezone"></p>
 		<p id="txtOcean"></p>
 		</div>
@@ -103,61 +103,19 @@
 		<th>
 		</tr>
 		</table>
+		<script>
+			$(document).ready(function(){
+				event.preventDefault();
 
-		<script> 
-			function showCountryCode() {
-				let xhr = XMLHttpRequest()
+				var countryCode = $(this).serialize();
 
-					xhr.open('POST','countryCode.php' ,true)
+				$.post("countryCode.php", countryCode, function(data){
+					$("#txtCountry").html(data);
+				});
+			});
+		});
 
-					xhr.onload = function() {
-						if (xhr.status == 200) {
-							console.log('success')
-							let countryCode = JSON.parse(this.response)
-							console.log(countryCode);
-						}
-					}
-
-					xhr.send()
-			}
-
-			function showTimezone() {
-				let xhr = XMLHttpRequest()
-
-
-					xhr.open('POST','timezone.php' ,true)
-
-					xhr.onload = function() {
-						if (xhr.status == 200) {
-							console.log('success')
-							let timezone = JSON.parse(this.response)
-							console.log(timezone)
-
-						}
-					}
-
-					xhr.send()
-			}
-
-			function showOcean() {
-				let xhr = XMLHttpRequest()
-			
-					xhr.open('POST','ocean.php',true)
-
-					xhr.onload = function() {
-						if (xhr.status == 200) {
-							console.log('success')
-							let ocean = JSON.parse(this.response)
-							console.log(ocean)
-						}
-					}
-
-					xhr.send()
-			}
-		
-		
 		</script>
-
 		<script type="application/javascript" src="libs/js/jquery-3.6.0.js"></script>
 		<script type="application/javascript" src="libs/js/script.js"></script>
 	</body>
