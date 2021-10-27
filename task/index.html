@@ -28,7 +28,7 @@
 		<tr>
 		<th>
 		<td>
-		<p id="txtCountry">Country Code</p>
+		<p>Country Code</p>
 		</th>
 		</td>
 		<td><u>Location</u>
@@ -51,7 +51,7 @@
 		<tr>
 		<th>
 		<td>
-		<p id="txtTimezone">Timezone</p>
+		<p>Timezone</p>
 		</th>
 		</td>
 		<td><u>Timezone</u>
@@ -74,7 +74,7 @@
 		<tr>
 		<th>
 		<td>
-		<p id="txtOcean">Ocean</p>
+		<p>Ocean</p>
 		</th>
 		</td>
 		<td><u>Ocean</u>
@@ -93,16 +93,39 @@
 		</tr>
 		<tr>
 		<th>
-		<td colspan="3" id="response" align="center">
-		<form results>Response
-			<output id="txtCountry"></output>
-			<output id="txtTimezone"></output>
-			<output id="txtOcean"></output>
-		</form>
+		<td colspan="3" align="center">Response
+		<div id="response">
+		<p id="txtOcean"></p>
+		<p id="txtTimezone"></p>
+		<p id="txtOcean"></p>
+		</div>
 		</td>
 		<th>
 		</tr>
 		</table>
+
+		<script> 
+			function showCountryCode() {
+				let xhr = XMLHttpRequest()
+
+					xhr.open('POST')
+			}
+
+			function showTimezone() {
+				let xhr = XMLHttpRequest()
+
+
+					xhr.open('POST')
+			}
+
+			function showOcean() {
+				let xhr = XMLHttpRequest()
+			
+					xhr.open('POST')
+			}
+		
+		
+		</script>
 
 		<script type="application/javascript" src="libs/js/jquery-3.6.0.js"></script>
 		<script type="application/javascript" src="libs/js/script.js"></script>

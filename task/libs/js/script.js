@@ -20,8 +20,8 @@ $('#countryCodeBtn').click(function() {
 
             if (response.status.name == "ok") {
 
-                $('#txtCountry').html(response.data[0].country);
-
+                $('#txtCountry').html(response.data.countryCode);
+                   
             }
             
         },
@@ -47,8 +47,8 @@ $('#countryCodeBtn').click(function() {
 
             if (response.status.name == "ok") {
 
-                $('#txtTimezone').html(response.data[0].timezone);
-
+                $('#txtTimezone').html(response.data.timezone);
+                    
             }
             
         },
@@ -75,8 +75,8 @@ $('#countryCodeBtn').click(function() {
 
             if (response.status.name == "ok") {
 
-                $('#txtOcean').html(response.data[0].ocean);
-
+                $('#txtOcean').html(response.data.ocean);
+                    
             }
             
         },
