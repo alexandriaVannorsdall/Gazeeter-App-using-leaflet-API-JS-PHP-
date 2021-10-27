@@ -20,7 +20,7 @@ $('#countryCodeBtn').click(function() {
 
             if (response.status.name == "ok") {
 
-                $('#txtCountry').html(result.data[0].country);
+                $('#txtCountry').html(response.data[0].country);
 
             }
             
@@ -47,7 +47,7 @@ $('#countryCodeBtn').click(function() {
 
             if (response.status.name == "ok") {
 
-                $('#txtTimezone').html(result.data[0].timezone);
+                $('#txtTimezone').html(response.data[0].timezone);
 
             }
             

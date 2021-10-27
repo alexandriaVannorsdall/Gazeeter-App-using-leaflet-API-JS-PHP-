@@ -93,8 +93,8 @@
 		</tr>
 		<tr>
 		<th>
-		<td colspan="3" id="results" align="center">
-		<form results>Results
+		<td colspan="3" id="response" align="center">
+		<form results>Response
 			<output id="txtCountry"></output>
 			<output id="txtTimezone"></output>
 			<output id="txtOcean"></output>
@@ -103,7 +103,13 @@
 		<th>
 		</tr>
 		</table>
-		
+		<script>
+			$("countryCodeBtn").click(function(){
+				$.post("countryCode.php"),function(data, status) {
+					alert("Data: " + data + "\nStatus: " + status);
+				});
+			});
+		</script>
 
 		<script type="application/javascript" src="libs/js/jquery-3.6.0.js"></script>
 		<script type="application/javascript" src="libs/js/script.js"></script>
