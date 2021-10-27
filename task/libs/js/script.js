@@ -75,7 +75,7 @@ $('#countryCodeBtn').click(function() {
 
             if (response.status.name == "ok") {
 
-                $('#txtOcean').html(result.data[0].ocean);
+                $('#txtOcean').html(response.data[0].ocean);
 
             }
             
