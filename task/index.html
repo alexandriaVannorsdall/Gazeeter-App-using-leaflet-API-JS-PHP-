@@ -105,7 +105,7 @@
 		</table>
 		<script>
 			$("countryCodeBtn").click(function(){
-				$.post("countryCode.php"),function(data, status) {
+				$.post("countryCode.php", function(data, status) {
 					alert("Data: " + data + "\nStatus: " + status);
 				});
 			});
