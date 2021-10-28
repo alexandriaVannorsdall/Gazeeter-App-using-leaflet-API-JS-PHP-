@@ -93,8 +93,8 @@
 		</tr>
 		<tr>
 		<th>
-		<td colspan="3" align="center">Response
-		<div id="response">
+		<td colspan="3" align="center">Results
+		<div id="results">
 		<p id="txtCountry"></p>
 		<p id="txtTimezone"></p>
 		<p id="txtOcean"></p>
@@ -103,19 +103,7 @@
 		<th>
 		</tr>
 		</table>
-		<script>
-			$(document).ready(function(){
-				event.preventDefault();
-
-				var countryCode = $(this).serialize();
-
-				$.post("countryCode.php", countryCode, function(data){
-					$("#txtCountry").html(data);
-				});
-			});
-		});
-
-		</script>
+		
 		<script type="application/javascript" src="libs/js/jquery-3.6.0.js"></script>
 		<script type="application/javascript" src="libs/js/script.js"></script>
 	</body>

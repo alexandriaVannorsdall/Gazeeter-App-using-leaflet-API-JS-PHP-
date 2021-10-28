@@ -5,93 +5,74 @@ $(window).on('load', function () {
         }); }
     });
 
-$('#countryCodeBtn').click(function() { 
-
-    var $txtCountry = $('#textCountry');
-
-    $.ajax({
-        url: "libs/php/countryCode.php",
-        type: 'POST',
-        dataType:'json',
-        data: {
-            lat: $('#codeLat').val(),
-            lng: $('#codeLng').val()
-        },
-        success: function (response) {
-            console.log(JSON.stringify(response));
-
-            if (response.status.name == "ok") {
-
-                $('#txtCountry').html(response.data.countryCode);
-                   
+    $("#countryCodeBtn").on("click", function () {
+        $.ajax({
+          url: "libs/php/countryCode.php",
+          type: "POST",
+          dataType: "json",
+          data: {
+            lat: $("#codeLat").val(),
+            lng: $("#codeLng").val(),
+          },
+          success: function (result) {
+            console.log(JSON.stringify(result));
+      
+            if (result.status.name == "ok") {
+              $("#txtCountry").html(result["data"][0]);
             }
-            
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log("There has been an error.");
-        }
-    });
-
-});
-
-    $('#timezoneBtn').click(function() {
-
-        var $txtTimezone = $('#txtTimezone');
-
-    $.ajax({
-        url: "libs/php/timezone.php",
-        type: 'POST',
-        dataType:'json',
-        data: {
-            lat: $('#timeLat').val(),
-            lng: $('#timeLng').val()
-        },
-        success: function (response) {
-            console.log(JSON.stringify(response));
-
-            if (response.status.name == "ok") {
-
-                $('#txtTimezone').html(response.data.timezone);
-                    
-            }
-            
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log("There has been an error.");
-        }
-    });
-
-});
-
-    $('#oceanBtn').click(function() {
-
-        var $txtOcean = $('txtOcean');
-
-    $.ajax({
-        url: "libs/php/ocean.php",
-        type: 'POST',
-        dataType:'json',
-        data: {
-            lat: $('#oceanLat').val(),
-            lng: $('#oceanLng').val()
-
-        },
-        success: function (response) {
-            console.log(JSON.stringify(response));
-
-            if (response.status.name == "ok") {
-
-                $('#txtOcean').html(response.data.ocean);
-                    
-            }
-            
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log("There has been an error.");
-            },
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+          },
         });
+      });
+      
 
-    });
+      $("#timezoneBtn").on("click", function () {
+        $.ajax({
+          url: "libs/php/timezone.php",
+          type: "POST",
+          dataType: "json",
+          data: {
+            lat: $("#timeLat").val(),
+            lng: $("#timeLng").val(),
+          },
+          success: function (result) {
+            console.log(JSON.stringify(result));
+      
+            if (result.status.name == "ok") {
+              $("#txtTimezone").html(result["data"][0]);
+            }
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+          },
+        });
+      });
+      
+
+      $("#oceanBtn").on("click", function () {
+        $.ajax({
+          url: "libs/php/ocean.php",
+          type: "POST",
+          dataType: "json",
+          data: {
+            lat: $("#oceanLat").val(),
+            lng: $("#oceanLng").val(),
+          },
+          success: function (result) {
+            console.log(JSON.stringify(result));
+      
+            if (result.status.name == "ok") {
+              $("#txtOcean").html(result["data"][0]);
+            }
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+          },
+        });
+      });
+      
 
 
 
