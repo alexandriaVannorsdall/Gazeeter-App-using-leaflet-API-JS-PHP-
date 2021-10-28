@@ -18,7 +18,7 @@ $(window).on('load', function () {
             console.log(JSON.stringify(result));
       
             if (result.status.name == "ok") {
-              $("#txtCountry").html(result["data"][0]);
+              $("#txtCountry").html(result["data"]);
             }
           },
           error: function (jqXHR, textStatus, errorThrown) {
@@ -41,7 +41,7 @@ $(window).on('load', function () {
             console.log(JSON.stringify(result));
       
             if (result.status.name == "ok") {
-              $("#txtTimezone").html(result["data"][0]);
+              $("#txtTimezone").html(result["data"]);
             }
           },
           error: function (jqXHR, textStatus, errorThrown) {
@@ -64,7 +64,7 @@ $(window).on('load', function () {
             console.log(JSON.stringify(result));
       
             if (result.status.name == "ok") {
-              $("#txtOcean").html(result["data"][0]);
+              $("#txtOcean").html(result["data"]["name"]);
             }
           },
           error: function (jqXHR, textStatus, errorThrown) {
